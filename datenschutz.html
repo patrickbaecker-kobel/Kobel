@@ -12,10 +12,11 @@
         <a href="datenschutz.html">Datenschutz</a>
         <a href="nutzungsbedingungen.html">Nutzungsbedingungen</a>
         <a href="impressum.html">Impressum</a>
+        <a href="en/privacy.html">English</a>
       </nav>
 
       <h1>Datenschutzerklärung</h1>
-      <p class="stand">Für die App „Kobel“ · Stand: 25. August 2026</p>
+      <p class="stand">Für die App „Kobel“ · Stand: 22. November 2026</p>
 
       <h2>1. Wer für die Verarbeitung verantwortlich ist</h2>
       <div class="karte">
@@ -43,8 +44,8 @@
         <p>
           <strong>Wichtig zum gemeinsamen Haushalt:</strong> Wer über den Beitritts-Code Mitglied deines
           Haushalts wird, kann alle Haushaltsdaten sehen und ändern – mit einer Ausnahme: Einträge im Bereich
-          „Privat“ sind nur für dich sichtbar. Der Passwort-Tresor ist zwar für den Haushalt gemeinsam, aber
-          nur mit dem Tresor-Code lesbar.
+          „Privat“ sind nur für dich sichtbar. Auch die Passwörter sind für den Haushalt gemeinsam sichtbar, liegen
+          aber verschlüsselt in der Datenbank (Abschnitt 3.7).
         </p>
       </div>
 
@@ -52,7 +53,7 @@
 
       <h3>3.1 Konto und Anmeldung</h3>
       <p>
-        Zur Anmeldung wird deine <strong>E-Mail-Adresse</strong> verarbeitet. Du bekommst einen Anmelde-Link
+        Zur Anmeldung wird deine <strong>E-Mail-Adresse</strong> verarbeitet. Du bekommst einen Bestätigungscode
         zugeschickt; ein Passwort wird nicht gespeichert. Gespeichert werden außerdem dein Anzeigename, ein
         Kürzel und eine Farbe für die Darstellung in der App.
       </p>
@@ -137,24 +138,85 @@
         </p>
       </div>
 
-      <h3>3.7 Passwort-Tresor</h3>
+      <h3>3.7 Passwörter</h3>
       <p>
-        Der Passwort-Tresor arbeitet anders als der Rest der App: Deine Einträge werden
-        <strong>auf deinem Gerät verschlüsselt</strong>, bevor sie gespeichert werden. Der Tresor-Code
-        verlässt dein Gerät nicht. Auf dem Server liegen nur unlesbare Daten – auch ich als Betreiber kann
-        sie nicht entschlüsseln. Das bedeutet zugleich: Ist der Tresor-Code vergessen, sind die Einträge
-        nicht wiederherstellbar. Eine Wiederherstellung gibt es bewusst nicht, weil sie auch anderen den
-        Weg öffnen würde.
+        Benutzername, Passwort, Notiz und Einmalcode in der Passwort-Kachel werden auf deinem Gerät
+        <strong>verschlüsselt</strong>, bevor sie gespeichert werden; in der Datenbank und in Sicherungen
+        stehen sie nur als unlesbarer Text. Dafür gilt dasselbe Verfahren wie für die besonders sensiblen
+        Angaben in Abschnitt 3.8: Alle Mitglieder deines Haushalts sehen die Passwörter ohne Code, der
+        Schlüssel liegt zu diesem Zweck auf dem Server (siehe die offene Aussage dort). Der Name des
+        Eintrags, die Kategorie und die Adresse bleiben lesbar, damit Liste und Suche funktionieren.
+        Frühere Einträge, die noch mit einem eigenen Tresor-Code gesichert waren, übernimmt die App einmal,
+        wenn du den Code eingibst.
+      </p>
+
+      <h3>3.8 Besonders sensible Angaben</h3>
+      <p>
+        Einzelne besonders sensible Angaben werden zusätzlich <strong>verschlüsselt gespeichert</strong>:
+        Nummer und Notiz bei Ausweisen, Kunden- und Vertragsnummer bei Verträgen, Angaben und Notizen im
+        Notfallblatt und bei Gesundheit sowie die Geheimnisse der Passwort-Kachel (nicht die Einträge, die du nur für dich angelegt hast). In der
+        Datenbank und in Sicherungen stehen sie nur als unlesbarer Text. Alle Mitglieder deines Haushalts
+        sehen sie in der App ganz normal.
+      </p>
+      <div class="karte wichtig">
+        <p>
+          <strong>Offen gesagt:</strong> Der Schlüssel dafür wird, damit alle Mitglieder ohne weiteren
+          Schritt Zugriff haben, auf dem Server verwahrt – getrennt von der Datenbank – und nur an
+          Mitglieder deines Haushalts herausgegeben. Das schützt vor offenen Datenbankauszügen,
+          Sicherungen und Datenlecks. Es ist <em>keine</em> Ende-zu-Ende-Verschlüsselung: Wer als
+          Betreiber Zugriff auf den Server und diesen Schlüssel hat, kann die Angaben technisch lesen.
+          Ich tue das nicht und greife nur zu, wo es der Betrieb der App unbedingt erfordert.
+          Titel, Namen, Fristen, Kosten und alle übrigen Inhalte sind davon nicht betroffen und liegen
+          wie in Abschnitt 3 beschrieben vor.
+        </p>
+      </div>
+
+      <h3>3.9 Reisen, Verbindungen und Einladungen mit anderen Haushalten</h3>
+      <p>
+        <strong>Reisen teilen:</strong> Du kannst eine Reise mit einem anderen Haushalt teilen (Einladung per
+        Einmalcode, den du selbst verschickst; der andere Haushalt muss zustimmen, und du bestätigst die Anfrage).
+        Erwachsene des eingeladenen Haushalts sehen dann Plan, Kosten und Unterlagen dieser Reise sowie Name, Farbe und
+        Profilbild der Mitreisenden und können Einträge ergänzen und ändern. Kinder des eingeladenen Haushalts sehen die
+        Reise, den Plan und die Mitreisenden, aber weder Kosten noch Unterlagen. Packliste und Aufgaben bleiben je
+        Haushalt privat. Du kannst Gäste jederzeit entfernen; ein Gast kann die Reise jederzeit verlassen und danach
+        eine Kopie ohne Unterlagen im eigenen Haushalt behalten.
+      </p>
+      <p>
+        <strong>Haushalte verbinden und zum Essen einladen:</strong> Du kannst deinen Haushalt mit einem anderen
+        verbinden (Einmalcode, sieben Tage gültig; der andere Haushalt fragt an, eine erwachsene Person des
+        einladenden Haushalts bestätigt). Dabei sieht der einladende Haushalt den Namen des anfragenden Haushalts und
+        der Person, die anfragt. Verbundene Haushalte sehen voneinander den Haushaltsnamen – alle Mitglieder, auch
+        Kinder. Lädst du einen verbundenen Haushalt zu einer Mahlzeit ein, sehen alle seine Mitglieder, auch Kinder,
+        Tag, Mahlzeit und deinen Text dazu, bis 30 Tage nach dem Termin. Essensplan, Rezepte, Vorräte, Einkauf und
+        Mitgliederliste bleiben unsichtbar. Jede Seite kann die Verbindung jederzeit beenden; die Einladungen zwischen
+        beiden Haushalten verschwinden dann sofort. Titel und Notiz einer Einladung sind freier Text – was du dort
+        schreibst, liest der andere Haushalt.
+      </p>
+      <p>
+        <strong>Beim Verlassen eines Haushalts:</strong> Deine privaten Einträge dort (private Verträge,
+        Gesundheitsangaben, Medikamente, ToDos und Listen) werden gelöscht. Private Finanzkonten bleiben bestehen,
+        weil geteilte Buchungen des Haushalts daran hängen.
       </p>
 
       <h2>4. Berechtigungen auf deinem Gerät</h2>
       <ul>
         <li>
-          <strong>Kamera:</strong> um Barcodes für Vorräte einzuscannen und ein Profilbild aufzunehmen.
+          <strong>Kamera:</strong> um Barcodes für Vorräte einzuscannen, ein Profilbild aufzunehmen und
+          ein Rezept von einer Buchseite abzufotografieren.
         </li>
-        <li><strong>Fotos:</strong> um ein vorhandenes Bild als Profilbild auszuwählen.</li>
         <li>
-          <strong>Face ID / Touch ID:</strong> um den Passwort-Tresor zu entsperren. Die biometrischen
+          <strong>Fotos:</strong> um ein vorhandenes Bild als Profilbild auszuwählen oder ein bereits
+          aufgenommenes Rezeptfoto zu übernehmen.
+        </li>
+        <li>
+          <strong>Rezept per Foto:</strong> Der Text auf einem abfotografierten Rezept wird
+          ausschließlich auf deinem Gerät gelesen (Apples Vision-Framework, Teil von iOS). Das Bild
+          wird dabei nicht hochgeladen, nicht gespeichert und nicht an uns oder an Dritte übermittelt.
+          Was in das Formular übernommen wird, siehst du vor dem Speichern und kannst es ändern.
+        </li>
+        <li>
+          <strong>Face ID / Touch ID:</strong> nur noch einmalig, um beim Übernehmen früherer
+          Passwort-Einträge den früher gemerkten Tresor-Schlüssel zu lesen. Die biometrischen
           Merkmale selbst bekommt die App nie zu sehen – das erledigt iOS.
         </li>
         <li>
@@ -200,14 +262,22 @@
           dieser Link aufgerufen,
         </li>
         <li>
+          an <strong>RevenueCat</strong>, wenn du Kobel Pro nutzt – dort werden Kaufdaten und eine Kennung verarbeitet,
+        </li>
+        <li>
+          an <strong>andere Haushalte</strong>, mit denen du eine Reise teilst oder verbunden bist (Abschnitt 3.9),
+        </li>
+        <li>
           an die anderen <strong>Mitglieder deines Haushalts</strong>, was allerdings der Sinn der App ist.
         </li>
       </ul>
 
       <h2>7. Kein Tracking, keine Analyse, keine automatisierten Entscheidungen</h2>
       <p>
-        Die App enthält keine Werbe- oder Analyse-Bausteine, kein Crash-Reporting und keine Weitergabe an
-        Dritte zu Werbezwecken. Es findet keine automatisierte Entscheidungsfindung und kein Profiling im
+        Die App enthält keine Werbe- oder Analyse-Bausteine und keine Weitergabe an
+        Dritte zu Werbezwecken. Fehlerberichte (Fehlertext, technische Angaben, App- und iOS-Version, ohne Bezug zu dir
+        oder deinem Haushalt) sendet die App an meinen eigenen Server; du kannst das in den Einstellungen abschalten, und
+        sie werden nach etwa 90 Tagen gelöscht. Es findet keine automatisierte Entscheidungsfindung und kein Profiling im
         Sinne von Art. 22 DSGVO statt.
       </p>
 
