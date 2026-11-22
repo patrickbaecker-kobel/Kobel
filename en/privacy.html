@@ -16,7 +16,7 @@
       </nav>
 
       <h1>Privacy Policy</h1>
-      <p class="stand">For the app “Kobel” · Last updated: 25 August 2026</p>
+      <p class="stand">For the app “Kobel” · Last updated: 22 November 2026</p>
 
       <h2>1. Who is responsible for the processing</h2>
       <div class="karte">
@@ -44,8 +44,8 @@
         <p>
           <strong>Important regarding the shared household:</strong> Anyone who joins your household
           using the join code can see and change all household data – with one exception: entries in the
-          “Private” area are visible only to you. The password vault is shared with the household, but
-          can only be read with the vault code.
+          “Private” area are visible only to you. The passwords are shared with the household as well, but
+          are stored encrypted in the database (section 3.7).
         </p>
       </div>
 
@@ -53,7 +53,7 @@
 
       <h3>3.1 Account and sign-in</h3>
       <p>
-        Your <strong>email address</strong> is processed for signing in. You receive a sign-in link; no
+        Your <strong>email address</strong> is processed for signing in. You receive a confirmation code; no
         password is stored. Your display name, an initial and a colour for display within the app are
         also stored.
       </p>
@@ -137,21 +137,82 @@
         </p>
       </div>
 
-      <h3>3.7 Password vault</h3>
+      <h3>3.7 Passwords</h3>
       <p>
-        The password vault works differently from the rest of the app: your entries are
-        <strong>encrypted on your device</strong> before they are stored. The vault code never leaves
-        your device. Only unreadable data is held on the server – not even I, as the operator, can
-        decrypt it. This also means: if the vault code is forgotten, the entries cannot be recovered.
-        There is deliberately no recovery option, because it would open the door to others as well.
+        Username, password, note and one-time code in the password tile are <strong>encrypted</strong> on
+        your device before they are stored; in the database and in backups they appear only as unreadable
+        text. The same method applies as for the particularly sensitive details in section 3.8: all members
+        of your household see the passwords without a code, and the key is held on the server for that
+        purpose (see the frank statement there). The entry name, category and address stay readable so
+        that the list and search work. Earlier entries that were still protected with a separate vault
+        code are transferred once by the app when you enter that code.
+      </p>
+
+      <h3>3.8 Particularly sensitive details</h3>
+      <p>
+        Some particularly sensitive details are additionally <strong>stored encrypted</strong>: number and
+        note on IDs, customer and contract number on contracts, details and notes in the emergency sheet
+        and under health (not entries you created for yourself only), and the secrets in the password tile. In the database and in backups they
+        appear only as unreadable text. All members of your household see them as usual in the app.
+      </p>
+      <div class="karte wichtig">
+        <p>
+          <strong>To be frank:</strong> so that every member has access without any extra step, the key
+          for this is kept on the server – separate from the database – and handed out only to members of
+          your household. This protects against exposed database dumps, backups and data leaks. It is
+          <em>not</em> end-to-end encryption: an operator with access to the server and this key can
+          technically read the details. I do not do so, and only access them where running the app
+          strictly requires it. Titles, names, deadlines, costs and all other content are not affected and
+          are held as described in section 3.
+        </p>
+      </div>
+
+      <h3>3.9 Trips, connections and invitations with other households</h3>
+      <p>
+        <strong>Sharing a trip:</strong> You can share a trip with another household (invitation by a one-time code
+        that you send yourself; the other household has to agree, and you confirm the request). Adults of the invited
+        household then see the trip's plan, costs and documents as well as name, colour and profile picture of the
+        travellers, and can add to and change entries. Children of the invited household see the trip, the plan and the
+        travellers, but neither costs nor documents. Packing list and tasks stay private for each household. You can
+        remove guests at any time; a guest can leave the trip at any time and keep a copy without documents in their
+        own household.
+      </p>
+      <p>
+        <strong>Connecting households and meal invitations:</strong> You can connect your household with another
+        household (one-time code, valid for seven days; the other household sends a request and an adult of the
+        inviting household confirms it). The inviting household sees the name of the requesting household and of the
+        person requesting. Connected households see each other's household name – all members, including children. If
+        you invite a connected household to a meal, all its members, including children, see the day, the meal and
+        your text until 30 days after the date. Meal plan, recipes, pantry, shopping and the member list stay
+        invisible. Either side can end the connection at any time; the invitations between both households then
+        disappear immediately. Title and note of an invitation are free text – the other household reads what you
+        write there.
+      </p>
+      <p>
+        <strong>When you leave a household:</strong> your private entries there (private contracts, health entries,
+        medication, tasks and lists) are deleted. Private finance accounts remain, because shared postings of the
+        household depend on them.
       </p>
 
       <h2>4. Permissions on your device</h2>
       <ul>
-        <li><strong>Camera:</strong> to scan barcodes for supplies and to take a profile picture.</li>
-        <li><strong>Photos:</strong> to select an existing image as a profile picture.</li>
         <li>
-          <strong>Face ID / Touch ID:</strong> to unlock the password vault. The app never sees the
+          <strong>Camera:</strong> to scan barcodes for supplies, to take a profile picture and to
+          photograph a recipe from a page.
+        </li>
+        <li>
+          <strong>Photos:</strong> to select an existing image as a profile picture, or to import a
+          recipe photo you already took.
+        </li>
+        <li>
+          <strong>Recipe from a photo:</strong> the text on a photographed recipe is read entirely on
+          your device (Apple's Vision framework, part of iOS). The image is not uploaded, not stored
+          and not transmitted to us or to anyone else. Whatever is filled into the form is shown to
+          you before saving and can be changed.
+        </li>
+        <li>
+          <strong>Face ID / Touch ID:</strong> only once, to read the previously remembered vault key when earlier
+          password entries are transferred. The app never sees the
           biometric features themselves – iOS handles that.
         </li>
         <li>
@@ -197,6 +258,12 @@
           link is called during synchronisation,
         </li>
         <li>
+          with <strong>RevenueCat</strong>, if you use Kobel Pro – purchase data and an identifier are processed there,
+        </li>
+        <li>
+          with <strong>other households</strong> you share a trip with or are connected to (section 3.9),
+        </li>
+        <li>
           with the other <strong>members of your household</strong>, which is of course the point of the
           app.
         </li>
@@ -204,8 +271,10 @@
 
       <h2>7. No tracking, no analytics, no automated decisions</h2>
       <p>
-        The app contains no advertising or analytics components, no crash reporting and no transfer to
-        third parties for advertising purposes. There is no automated decision-making and no profiling
+        The app contains no advertising or analytics components and no transfer to third parties for
+        advertising purposes. Error reports (error text, technical details, app and iOS version, not linked to you or
+        your household) are sent to my own server; you can switch this off in the settings, and they are deleted
+        after about 90 days. There is no automated decision-making and no profiling
         within the meaning of Art. 22 GDPR.
       </p>
 
